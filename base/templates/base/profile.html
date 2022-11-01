@@ -2,21 +2,19 @@
 
 {% block content %}
 <style>
-    .home-container{
+    .profile-container{
         display:grid;
         grid-template-columns: 1fr 3fr 1fr;
     }
 </style>
-
-<div class="home-container">
+<p>{{ user.username }}</p>
+<div class="profile-container">
     <div>
         {% include 'base/topics_component.html' %}
     </div>
     
     <div>
-        <h5>{{ room_count }} room(s) available</h5>
-        <div><a href="{% url 'create-room' %}"> Create Room</a></div>
-        {% include 'base/feed_component.html' %}
+         {% include 'base/feed_component.html' %}
     </div>
 
     <div>
